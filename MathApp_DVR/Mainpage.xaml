@@ -1,0 +1,63 @@
+﻿<Page
+    x:Class="MathApp_DVR.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MathApp_DVR"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/Image1.jpg"/>
+        </Grid.Background>
+        <StackPanel
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Height="200"
+            Width="200"
+            Background="#B2000000"
+            >
+            <StackPanel HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Margin="0, 40"
+                        >
+               <TextBox
+                Name="UserName"
+                Margin="5"
+                PlaceholderText="Username"
+                Width="150"
+                />
+            <PasswordBox
+                Name="PassWord"
+                PlaceholderText="Password"
+                Width="150"
+                />
+
+                <StackPanel>
+                    <Button 
+                Name="btnLogin"
+                Click="btnLogin_Click"
+                Background="#B2FF0000"
+                Foreground="White"
+                        Margin="5"
+                BorderThickness="2"
+                    >
+                Login
+            </Button>
+                    <HyperlinkButton
+                x:Name="btnRegister"
+                Click="btnRegister_Click"
+                Foreground="White"
+                BorderThickness="2"
+                Content="Register"
+                        Margin="5, -10"
+                    />
+                </StackPanel>
+            
+            </StackPanel>
+            
+        </StackPanel>
+    </Grid>
+</Page>

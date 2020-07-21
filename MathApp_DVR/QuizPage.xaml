@@ -1,0 +1,86 @@
+﻿<Page
+    x:Class="MathApp_DVR.QuizPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MathApp_DVR"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/Image1.jpg"/>
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="8*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Background="Black"
+                    >
+            <StackPanel
+                Margin="20, 0"
+                >
+                <TextBlock Name="TUsername"
+                       Foreground="White"
+                       />
+            <TextBlock Foreground="White"
+                       Name="TGrade"
+                       />
+            <TextBlock Foreground="White"
+                       Name="TScore"
+                       />
+            <TextBlock Foreground="White"
+                       Name="TQuestionsLeft"
+                       />
+            <TextBlock Foreground="White"
+                       Name="TQuizType"
+                       />
+            </StackPanel>
+            
+        </StackPanel>
+        
+        <StackPanel
+            Name="Questionaire"
+            Grid.Row="1"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Height="auto"
+            Width="auto"
+            Margin="10, 10, 10 ,10"
+            Background="#B2800080"
+            >
+            <StackPanel
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Width="150"
+                Margin="20, 50, 20, 50"
+                >
+                <TextBlock
+                    Name="Question"
+                    TextAlignment="Center"
+                    Margin="0, 20, 0 ,20"
+                    FontSize="24"
+                    Foreground="White"
+                    Text=""
+                    />
+                <TextBox
+                    Name="Answer"
+                    PlaceholderText="Enter Answer here"
+                    />
+
+                <Button
+                    Name="Confirm"
+                    Click="Confirm_Click"
+                    Margin="0, 20"
+                    Background="#B2FF0000"
+                    Foreground="White"
+                    >
+                    Confirm
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

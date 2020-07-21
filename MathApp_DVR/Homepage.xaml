@@ -1,0 +1,90 @@
+﻿<Page
+    x:Class="MathApp_DVR.Homepage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MathApp_DVR"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/Image1.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="8*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" 
+                    Background="Black"
+                    >
+            <TextBlock
+                       Foreground="White" 
+                       Margin="20"
+                       TextAlignment="Center"
+                       FontSize="24"
+                       Name="WelcomeMessage"
+                       />
+        </StackPanel>
+
+        <StackPanel Grid.Row="1"
+                    Background="#99000000">
+            <AppBarButton 
+                Name="btnLoginPage"
+                Icon="Contact"
+                Click="btnLoginPage_Click" Background="Transparent" Foreground="White" 
+                          />
+        </StackPanel>
+        
+        <StackPanel Grid.Row="1"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Height="auto"
+                    Width="auto"
+                    Background="#B2000000"
+                    >
+            <StackPanel
+                Margin="50,50,50,50"
+                Height="auto"
+                Width="auto"
+                >
+                <Button Name="Quiz"
+                          Click="Quiz_Click"
+                          FontSize="18"
+                          VerticalAlignment="Center"
+                          HorizontalAlignment="Center"
+                          Width="150" 
+                          Margin="10,10,10,10"
+                          Background="#B2FF0000"
+                          Content="Take Quiz" Foreground="White"
+                          >
+                </Button>
+            <Button Name="Results"
+                          Width="150"
+                          Margin="10,10,10,10"
+                          Click="Results_Click"
+                          FontSize="18"
+                          Background="#B2FF0000" Foreground="White"
+                          >
+                See Results
+            </Button> 
+            </StackPanel>
+            
+        </StackPanel>
+
+
+
+        <StackPanel Grid.Row="2" 
+                    Background="Black"
+                    >
+            <TextBlock Foreground="White" 
+                       TextAlignment="Center" FontSize="24"
+                       Name="Footer"
+                       Text="Created by DVR"
+                       />
+        </StackPanel>
+    </Grid>
+</Page>

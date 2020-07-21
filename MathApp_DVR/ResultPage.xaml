@@ -1,0 +1,178 @@
+﻿<Page
+    x:Class="MathApp_DVR.ResultPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MathApp_DVR"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/Image1.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" 
+                    Background="Black"
+                    >
+            <TextBlock Foreground="White" 
+                       Margin="20"
+                       TextAlignment="Center"
+                       FontSize="24"
+                       Name="WelcomeMessage"
+                       />
+        </StackPanel>
+
+        <GridView
+                x:Name="Gridview_Results"
+                ItemsSource="{Binding}"
+                IsItemClickEnabled="False"
+                Grid.Row="1" 
+                Background="#97000000" 
+				>
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel
+                            Orientation="Horizontal"
+                            Grid.Row="1"
+                            Margin="5,5,10,5"
+                            Padding="5"
+                            >
+                        <StackPanel>
+                            <TextBlock
+                                Text="{Binding User}" 
+                                TextAlignment="Center"
+                                FontSize="16"
+                                FontWeight="ExtraLight"
+                                VerticalAlignment="Center"
+                                Foreground="White"
+                                />
+                            <TextBlock
+                                Text="{Binding Score}" 
+                                FontSize="16"
+                                TextAlignment="Left"
+                                FontWeight="ExtraLight"
+                                VerticalAlignment="Center" 
+                                Foreground="White"
+                                
+                                />
+                            <TextBlock
+                                Text= "{Binding Difficulty}" 
+                                FontSize="16"
+                                TextAlignment="Left"
+                                FontWeight="ExtraLight"
+                                VerticalAlignment="Center" 
+                                Foreground="White"
+                                
+                                />
+                            <TextBlock
+                                Text="{Binding Grade}" 
+                                FontSize="16"
+                                TextAlignment="Left"
+                                FontWeight="ExtraLight"
+                                VerticalAlignment="Center" 
+                                Foreground="White"
+                                
+                                />
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+
+        <GridView
+                x:Name="Gridview_AllResults"
+                ItemsSource="{Binding}"
+                IsItemClickEnabled="False"
+                Grid.Row="3" 
+                Background="#97000000" 
+                HorizontalAlignment="Stretch"
+				>
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel
+                            Orientation="Horizontal"
+                            Grid.Row="1"
+                            Margin="5,5,10,5"
+                            Padding="5"
+                            >
+                        <StackPanel>
+                            <TextBlock
+                                Text="{Binding User}" 
+                                TextAlignment="Center"
+                                FontSize="16"
+                                FontWeight="ExtraLight"
+                                VerticalAlignment="Center"
+                                Foreground="White"
+                                />
+                            <TextBlock
+                                Text="{Binding Score}" 
+                                FontSize="16"
+                                TextAlignment="Left"
+                                FontWeight="ExtraLight"
+                                VerticalAlignment="Center" 
+                                Foreground="White"
+                                
+                                />
+                            <TextBlock
+                                Text= "{Binding Difficulty}" 
+                                FontSize="16"
+                                TextAlignment="Left"
+                                FontWeight="ExtraLight"
+                                VerticalAlignment="Center" 
+                                Foreground="White"
+                                
+                                />
+                            <TextBlock
+                                Text="{Binding Grade}" 
+                                FontSize="16"
+                                TextAlignment="Left"
+                                FontWeight="ExtraLight"
+                                VerticalAlignment="Center" 
+                                Foreground="White"
+                                
+                                />
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+        
+        
+        <AppBarButton 
+            Grid.Row="0"
+                Name="btnHomepage"
+                Icon="Home"
+                Click="btnHomepage_Click" Background="Transparent" Foreground="White" 
+                          />
+        <StackPanel Grid.Row="4" 
+                    Background="Black"
+                    >
+            <TextBlock Foreground="White" 
+                       TextAlignment="Center" FontSize="24"
+                       Name="Footer"
+                       Text="Created by DVR"
+                       />
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" 
+                    Background="Black"
+                    >
+            <TextBlock Foreground="White" 
+                       Margin="20"
+                       TextAlignment="Center" 
+                       FontSize="24"
+                       Name="Body"
+                       Text="All User's Results"
+                       />
+        </StackPanel>
+    </Grid>
+</Page>
